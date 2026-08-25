@@ -1284,3 +1284,26 @@ h1, h2, h3, h4, h5, h6, .font-display { font-family: "DM Sans", "Montserrat", "H
   h1, .hero h1 { font-size: 2.2rem; }.system-placeholder { min-height: 315px; }.system-orbit { width: 225px; height: 155px; top: 72px; }
   .system-node { min-width: 88px; padding: .55rem .65rem; font-size: .68rem; }.node-main { top: 120px; width: 105px; height: 78px; }.node-one { top: 34px; right: 10px; }.node-two { bottom: 56px; left: 10px; }.node-three { bottom: 38px; right: 8px; }
 }
+
+/* Keep footer glyphs optically centered inside their fixed wrappers. */
+.footer .social-icon {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 0 !important;
+  line-height: 1;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.footer .social-icon i {
+  display: block;
+  width: 1em;
+  height: 1em;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1;
+}
