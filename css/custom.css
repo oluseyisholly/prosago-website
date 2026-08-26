@@ -1307,3 +1307,38 @@ h1, h2, h3, h4, h5, h6, .font-display { font-family: "DM Sans", "Montserrat", "H
   font-size: 1rem;
   line-height: 1;
 }
+
+/* Official Prosago Works logomark lockups */
+.pw-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .75rem;
+  color: var(--pw-slate) !important;
+  font-size: 1rem;
+}
+.pw-brand img {
+  display: block;
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
+}
+.pw-brand > span { color: inherit !important; }
+.footer .footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: .85rem;
+  margin-bottom: 1.25rem;
+  color: var(--pw-white) !important;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.footer .footer-logo img {
+  display: block;
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+}
+@media (max-width: 399.98px) {
+  .pw-brand { gap: .5rem; font-size: .88rem; }
+  .pw-brand img { width: 42px; height: 42px; flex-basis: 42px; }
+}

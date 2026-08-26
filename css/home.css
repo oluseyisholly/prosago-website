@@ -2,6 +2,10 @@
    Kept separate from legacy template styles so responsive behaviour is predictable. */
 
 #main-content { overflow: hidden; }
+.pw-brand { display: inline-flex; align-items: center; gap: .75rem; color: var(--pw-slate) !important; font-size: 1rem; }
+.pw-brand img { display: block; width: 52px; height: 52px; flex: 0 0 52px; }
+.footer-logo { display: inline-flex !important; align-items: center; gap: .85rem; margin-bottom: 1.25rem !important; color: var(--pw-white) !important; font-size: 1.25rem; font-weight: 700; }
+.footer-logo img { display: block; width: 64px; height: 64px; flex: 0 0 64px; }
 .corporate-hero .row,
 .trust-statement .row,
 .portfolio-feature .row { min-width: 0; }
@@ -91,9 +95,8 @@
   body > nav .container,
   #main-content > * > .container,
   body > footer .container { width: calc(100% - 1.5rem); }
-  .brand-placeholder { grid-template-columns: 36px auto; column-gap: .5rem; font-size: .86rem; }
-  .brand-placeholder .brand-mark { width: 36px; height: 36px; }
-  .brand-placeholder small { display: none; }
+  .pw-brand { gap: .5rem; font-size: .88rem; }
+  .pw-brand img { width: 42px; height: 42px; flex-basis: 42px; }
   .navbar-toggler-custom { width: 40px; height: 40px; }
   .corporate-hero { padding-top: 6.75rem; }
   .corporate-hero h1 { font-size: clamp(2rem, 12vw, 2.4rem); }
