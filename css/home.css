@@ -1,0 +1,110 @@
+/* Prosago Works homepage layout.
+   Kept separate from legacy template styles so responsive behaviour is predictable. */
+
+#main-content { overflow: hidden; }
+.corporate-hero .row,
+.trust-statement .row,
+.portfolio-feature .row { min-width: 0; }
+.corporate-hero [class*="col-"],
+.trust-statement [class*="col-"],
+.portfolio-feature [class*="col-"] { min-width: 0; }
+
+@media (min-width: 1400px) {
+  body > nav .container,
+  #main-content > * > .container,
+  body > footer .container { max-width: 1280px; }
+  .corporate-hero { min-height: 820px; }
+}
+
+@media (max-width: 991.98px) {
+  body > nav .container,
+  #main-content > * > .container,
+  body > footer .container {
+    width: calc(100% - 2.5rem);
+    max-width: 720px;
+    margin-inline: auto;
+    padding-inline: 0;
+  }
+  .navbar-nexora { padding-block: .7rem; }
+  .navbar-collapse {
+    margin-top: .7rem;
+    padding: .75rem;
+    max-height: calc(100dvh - 84px);
+    overflow-y: auto;
+    background: var(--pw-white);
+    border: 1px solid var(--pw-platinum);
+    box-shadow: var(--n-shadow-md);
+  }
+  .navbar-nexora .navbar-nav { align-items: stretch !important; margin-top: 0 !important; }
+  .navbar-nexora .nav-link { display: flex; align-items: center; min-height: 44px; }
+  .corporate-hero {
+    min-height: 0;
+    padding: 8rem 0 4.5rem;
+    text-align: left;
+  }
+  .corporate-hero::before { display: none; }
+  .corporate-hero .hero-content { width: 100%; max-width: 680px; }
+  .corporate-hero .hero-content > .d-flex { justify-content: flex-start !important; }
+  .system-placeholder { width: 100%; max-width: 620px; margin-inline: auto; }
+  .trust-statement .section-kicker { max-width: none; }
+  .portfolio-placeholder { border-right: 0; border-bottom: 1px solid var(--pw-slate); }
+}
+
+@media (max-width: 767.98px) {
+  body > nav .container,
+  #main-content > * > .container,
+  body > footer .container {
+    width: calc(100% - 2rem);
+    max-width: 540px;
+  }
+  .section { padding-block: 3.75rem; }
+  .section-sm { padding-block: 2.75rem; }
+  .section-header { margin-bottom: 2rem; }
+  .corporate-hero { padding: 7.25rem 0 3.5rem; }
+  .corporate-hero h1 { font-size: clamp(2.25rem, 11vw, 3rem); line-height: 1.04; }
+  .corporate-hero .hero-lead { font-size: 1.05rem; line-height: 1.55; }
+  .corporate-hero .hero-content > .d-flex {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+  }
+  .corporate-hero .hero-content .btn { width: 100%; white-space: normal; }
+  .system-placeholder { min-height: 340px; }
+  .system-orbit { width: min(280px, 82%); height: 180px; top: 78px; }
+  .node-main { top: 132px; }
+  .node-one { top: 40px; right: 14px; }
+  .node-two { bottom: 60px; left: 14px; }
+  .node-three { bottom: 44px; right: 12px; }
+  .statement { font-size: 1.4rem; }
+  .card-premium { height: auto; padding: 1.5rem; }
+  .principle-number { margin-bottom: 1.5rem; }
+  .portfolio-placeholder { min-height: 230px; }
+  .portfolio-copy { padding: 2rem 1.5rem; }
+  .status-badge { max-width: 100%; white-space: normal; }
+  .audience-card { min-height: 200px; padding: 1.5rem; }
+  .cta-panel { flex-direction: column; align-items: stretch; padding: 2rem 1.5rem; }
+  .cta-panel .btn { width: 100%; white-space: normal; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 399.98px) {
+  body > nav .container,
+  #main-content > * > .container,
+  body > footer .container { width: calc(100% - 1.5rem); }
+  .brand-placeholder { grid-template-columns: 36px auto; column-gap: .5rem; font-size: .86rem; }
+  .brand-placeholder .brand-mark { width: 36px; height: 36px; }
+  .brand-placeholder small { display: none; }
+  .navbar-toggler-custom { width: 40px; height: 40px; }
+  .corporate-hero { padding-top: 6.75rem; }
+  .corporate-hero h1 { font-size: clamp(2rem, 12vw, 2.4rem); }
+  .system-placeholder { min-height: 290px; }
+  .system-orbit { width: 210px; height: 145px; top: 65px; }
+  .system-node { min-width: 78px; padding: .5rem; font-size: .64rem; }
+  .node-main { top: 106px; width: 98px; height: 74px; }
+  .node-one { top: 28px; right: 8px; }
+  .node-two { bottom: 50px; left: 8px; }
+  .node-three { bottom: 34px; right: 6px; }
+  .system-placeholder > small { right: .65rem; bottom: .65rem; font-size: .55rem; }
+  .portfolio-copy, .card-premium, .audience-card, .cta-panel { padding-inline: 1.25rem; }
+  .footer-bottom .d-flex { flex-wrap: wrap; gap: 1rem !important; }
+}
