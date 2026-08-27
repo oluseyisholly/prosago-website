@@ -1,7 +1,17 @@
 /* Prosago Works homepage layout.
    Kept separate from legacy template styles so responsive behaviour is predictable. */
 
-#main-content { overflow: hidden; }
+html, body { width: 100%; max-width: 100%; overflow-x: clip; }
+#main-content { width: 100%; max-width: 100%; overflow: clip; }
+#main-content .row { min-width: 0; }
+#main-content .row > * { min-width: 0; }
+#main-content p,
+#main-content h1,
+#main-content h2,
+#main-content h3,
+#main-content a,
+.footer p,
+.footer a { overflow-wrap: anywhere; }
 .pw-brand { display: inline-flex; align-items: center; gap: .75rem; color: var(--pw-slate) !important; font-size: 1rem; }
 .pw-brand img { display: block; width: 52px; height: 52px; flex: 0 0 52px; }
 .footer-logo { display: inline-flex !important; align-items: center; gap: .85rem; margin-bottom: 1.25rem !important; color: var(--pw-white) !important; font-size: 1.25rem; font-weight: 700; }
@@ -27,7 +37,6 @@
     width: calc(100% - 2.5rem);
     max-width: 720px;
     margin-inline: auto;
-    padding-inline: 0;
   }
   .navbar-nexora { padding-block: .7rem; }
   .navbar-collapse {
@@ -41,6 +50,8 @@
   }
   .navbar-nexora .navbar-nav { align-items: stretch !important; margin-top: 0 !important; }
   .navbar-nexora .nav-link { display: flex; align-items: center; min-height: 44px; }
+  .navbar-nexora .container { flex-wrap: wrap; }
+  .navbar-collapse { flex-basis: 100%; width: 100%; }
   .corporate-hero {
     min-height: 0;
     padding: 8rem 0 4.5rem;
@@ -72,6 +83,7 @@
     grid-template-columns: minmax(0, 1fr);
     width: 100%;
   }
+  .corporate-hero .hero-content > .d-flex > * { min-width: 0; }
   .corporate-hero .hero-content .btn { width: 100%; white-space: normal; }
   .system-placeholder { min-height: 340px; }
   .system-orbit { width: min(280px, 82%); height: 180px; top: 78px; }
@@ -85,10 +97,12 @@
   .portfolio-placeholder { min-height: 230px; }
   .portfolio-copy { padding: 2rem 1.5rem; }
   .status-badge { max-width: 100%; white-space: normal; }
+  .direction-list, .direction-list li { min-width: 0; }
   .audience-card { min-height: 200px; padding: 1.5rem; }
   .cta-panel { flex-direction: column; align-items: stretch; padding: 2rem 1.5rem; }
   .cta-panel .btn { width: 100%; white-space: normal; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
+  .footer-bottom > * { max-width: 100%; }
 }
 
 @media (max-width: 399.98px) {
