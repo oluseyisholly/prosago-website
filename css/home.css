@@ -1,8 +1,8 @@
 /* Prosago Works homepage layout.
    Kept separate from legacy template styles so responsive behaviour is predictable. */
 
-html, body { width: 100%; max-width: 100%; overflow-x: clip; }
-#main-content { width: 100%; max-width: 100%; overflow: clip; }
+html, body { width: 100%; max-width: 100%; overflow-x: hidden !important; }
+#main-content { width: 100%; max-width: 100%; overflow-x: hidden; }
 #main-content .row { min-width: 0; }
 #main-content .row > * { min-width: 0; }
 #main-content p,
@@ -16,6 +16,7 @@ html, body { width: 100%; max-width: 100%; overflow-x: clip; }
 .pw-brand img { display: block; width: 52px; height: 52px; flex: 0 0 52px; }
 .footer-logo { display: inline-flex !important; align-items: center; gap: .85rem; margin-bottom: 1.25rem !important; color: var(--pw-white) !important; font-size: 1.25rem; font-weight: 700; }
 .footer-logo img { display: block; width: 64px; height: 64px; flex: 0 0 64px; }
+.hero-illustration { display: block; width: 100%; height: auto; max-height: 590px; object-fit: contain; }
 .corporate-hero .row,
 .trust-statement .row,
 .portfolio-feature .row { min-width: 0; }
@@ -61,16 +62,36 @@ html, body { width: 100%; max-width: 100%; overflow-x: clip; }
   .corporate-hero .hero-content { width: 100%; max-width: 680px; }
   .corporate-hero .hero-content > .d-flex { justify-content: flex-start !important; }
   .system-placeholder { width: 100%; max-width: 620px; margin-inline: auto; }
+  .hero-illustration { width: min(100%, 580px); max-height: 520px; margin-inline: auto; }
   .trust-statement .section-kicker { max-width: none; }
   .portfolio-placeholder { border-right: 0; border-bottom: 1px solid var(--pw-slate); }
 }
 
 @media (max-width: 767.98px) {
+  body > nav,
+  #main-content,
+  #main-content > section,
+  #main-content > header,
+  body > footer {
+    width: 100%;
+    max-width: 100%;
+  }
   body > nav .container,
   #main-content > * > .container,
   body > footer .container {
     width: calc(100% - 2rem);
     max-width: 540px;
+  }
+  #main-content .row,
+  body > footer .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  #main-content .row > [class*="col"],
+  body > footer .row > [class*="col"] {
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
   }
   .section { padding-block: 3.75rem; }
   .section-sm { padding-block: 2.75rem; }
@@ -86,6 +107,7 @@ html, body { width: 100%; max-width: 100%; overflow-x: clip; }
   .corporate-hero .hero-content > .d-flex > * { min-width: 0; }
   .corporate-hero .hero-content .btn { width: 100%; white-space: normal; }
   .system-placeholder { min-height: 340px; }
+  .hero-illustration { max-height: 440px; }
   .system-orbit { width: min(280px, 82%); height: 180px; top: 78px; }
   .node-main { top: 132px; }
   .node-one { top: 40px; right: 14px; }
@@ -115,6 +137,7 @@ html, body { width: 100%; max-width: 100%; overflow-x: clip; }
   .corporate-hero { padding-top: 6.75rem; }
   .corporate-hero h1 { font-size: clamp(2rem, 12vw, 2.4rem); }
   .system-placeholder { min-height: 290px; }
+  .hero-illustration { max-height: 360px; }
   .system-orbit { width: 210px; height: 145px; top: 65px; }
   .system-node { min-width: 78px; padding: .5rem; font-size: .64rem; }
   .node-main { top: 106px; width: 98px; height: 74px; }

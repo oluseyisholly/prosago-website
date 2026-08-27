@@ -1338,6 +1338,17 @@ h1, h2, h3, h4, h5, h6, .font-display { font-family: "DM Sans", "Montserrat", "H
   height: 64px;
   flex: 0 0 64px;
 }
+.brand-illustration {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 620px;
+  object-fit: contain;
+  background: var(--pw-white);
+}
+@media (max-width: 767.98px) {
+  .brand-illustration { max-height: 480px; margin-inline: auto; }
+}
 @media (max-width: 399.98px) {
   .pw-brand { gap: .5rem; font-size: .88rem; }
   .pw-brand img { width: 42px; height: 42px; flex-basis: 42px; }
